@@ -39,7 +39,7 @@ setup(
             'fbs/installer/mac', 'create-dmg'
         )
     },
-    install_requires=['PyInstaller==3.4'],
+    install_requires=['PyInstaller>=4.10'],
     extras_require={
         # Also update requirements.txt when you change this:
         'licensing': ['rsa>=3.4.2'],
@@ -58,6 +58,10 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
 
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules'
@@ -66,7 +70,7 @@ setup(
         'console_scripts': ['fbs=fbs.__main__:_main']
     },
     license='GPLv3 or later',
-    keywords='PyQt',
+    keywords='PyQt5 PyQt6 PySide2 PySide6',
     platforms=['MacOS', 'Windows', 'Debian', 'Fedora', 'CentOS', 'Arch'],
     test_suite='tests'
 )
