@@ -79,6 +79,9 @@ FunctionEnd
   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${app_name}"
 Section
   SetOutPath "$InstDir"
+  AccessControl::GrantOnFile \
+  "$INSTDIR" "(BU)" "GenericRead + GenericWrite"
+  Pop $0
   File /r "..\${app_name}\*"
   WriteRegStr SHCTX "Software\${app_name}" "" $InstDir
   WriteUninstaller "$InstDir\uninstall.exe"
